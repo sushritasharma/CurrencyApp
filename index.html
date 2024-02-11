@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter - Convert your Currency</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+       
+       
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Roboto+Mono:wght@300;400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color:black;
+        }
+        .container {
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .container h1 {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 45px;
+            margin-top: 23px;
+            text-align: center;
+            color: white;
+        }
+
+        .container form input[type='number'],
+        select,
+        label {
+            font-size: 25px;
+            margin: 23px 0;
+            width: 23vw;
+            
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 18px;
+            color: white;
+            font-family: 'Roboto Mono', monospace;
+
+            
+        }
+
+        .container form {
+            display: flex;
+            flex-direction: column;
+            margin: 30px 30px;
+            
+        }
+
+        .container h1 h2 {}
+
+        footer {
+            text-align: center;
+
+        }
+
+        nav {
+            font-family: 'Noto-Sans', sans-serif;
+            display: flex;
+            font-size: 20px;
+            background-color: #6F36BC;
+            padding: 23px;
+
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: #FF4778;
+            transition: all;
+            transition-duration: 500MS;
+        }
+
+        nav li a:hover {
+            text-decoration: none;
+            color: #F3EFFE;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #F3EFFE;
+
+        }
+
+        .output {
+            display: none;
+            color: #F3EFFE;
+
+        }
+
+        .btn {
+
+            width: 120px;
+            padding: 8px 23px;
+            font-size: 18px;
+            background-color: #6F36BC;
+            color: #FF4778;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 23px;
+        }
+
+        .btn:hover {
+            color: #F3EFFE;
+            text-decoration: none;
+            transition-duration: 500ms;
+        }
+
+        .output table {
+            width: 50vw;
+            text-align: center;
+            border: 2px solid black;
+            margin-top: 23px;
+            font-size: 15px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                
+            }
+            nav {
+                flex-direction: column;
+                font-size: 14px;
+            }
+
+            nav ul li {
+                margin: 0 3px;
+            }
+
+            nav ul {
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .container{
+                max-width: 95vw;
+            }
+
+            .container form input[type = 'number'], select, label{
+                width: 80 vw;
+            }
+
+            div form {
+                color: aqua;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+   
+
+   
+    <nav>
+        <div class="logo">My Currency Converter</div>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="container">
+        <h1>Choose a currency to convert</h1>
+        <form action="/action.php" method="get">
+            <label for="quantity"> Choose your quantity : </label>
+            <input type="number" name="quantity" min="1" max="10">
+            <label for="currency"> Choose your currency : </label>
+
+            <select name="currency">
+                <option value="INR">Indian Rupee</option>
+                <option value="USD">US Dollar</option>
+                <option value="EUR">European</option>
+            </select>
+            <button class="btn" type="submit">Submit</button>
+
+
+        </form>
+
+        <div class="output">
+            <h2>Here is your converted value in different currencies</h2>
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Currency</th>
+                        <th>Code</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+    <footer>
+        Copyright &copy; All Rights Reserved
+
+    </footer>
+
+
+    <script src="main.js"></script>
+
+   
+
+
+</body>
+
+
+
+</html>
